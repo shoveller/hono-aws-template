@@ -3,10 +3,5 @@
 ## 사용법
 
 ```sh
- pnpm create hono@latest my-app -- --template github:user/repo
-```
-
-```
-npm install
-npm run deploy
+ pnpm create hono@latest my-app -- --template https://github.com/shoveller/hono-aws-template
 ```
