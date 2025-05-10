@@ -1,5 +1,5 @@
 {
-  "name": "hello-hono-aws",
+  "name": "hono-aws-template",
   "type": "module",
   "scripts": {
     "dev": "tsx watch src/dev.ts",
