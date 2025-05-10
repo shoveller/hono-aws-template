@@ -5,5 +5,5 @@
 ```sh
 pnpm dlx degit shoveller/hono-aws-template my-app
 cd my-app
-pnpm install
+pnpm i
 ```
