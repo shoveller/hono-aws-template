@@ -40,7 +40,7 @@ export const createSuccessSchema = (dataSchema: ZodType) => {
   })
 }
 
-export const getSuccessRoute = ({
+export const createSuccessRoute = ({
   description = '성공응답',
   resSchema
 }: {

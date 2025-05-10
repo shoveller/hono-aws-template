@@ -1,5 +1,5 @@
 import {
-  getSuccessRoute,
+  createSuccessRoute,
   getFailRoute,
   createNumberSchema,
   createSuccessSchema
@@ -30,7 +30,7 @@ helloRouter.get(
     validateResponse: true,
     description: '테스트 라우트',
     responses: {
-      200: getSuccessRoute({ resSchema }),
+      200: createSuccessRoute({ resSchema }),
       400: getFailRoute()
     }
   }),
