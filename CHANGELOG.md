@@ -1,3 +1,11 @@
+## [1.0.1](https://github.com/shoveller/hono-aws-template/compare/1.0.0...1.0.1) (2025-05-11)
+
+
+### Bug Fixes
+
+* .gitignore에 .lh 추가 및 release.config.ts의 URL 반환 로직 수정 ([8cfeea5](https://github.com/shoveller/hono-aws-template/commit/8cfeea57b75c0c87558335d911cd333f91610633))
+* 수정된 저장소 URL 반환 로직 ([f73df3c](https://github.com/shoveller/hono-aws-template/commit/f73df3c80ca1e9dcb20edcba0370dffcc201c92f))
+
 # 1.0.0 (2025-05-11)
 
 
