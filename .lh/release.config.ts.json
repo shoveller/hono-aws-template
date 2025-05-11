@@ -1,0 +1,18 @@
+{
+    "sourceFile": "release.config.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1746968237744,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1746968237744,
+            "name": "Commit-0",
+            "content": "import { GlobalConfig } from 'semantic-release'\n\n// GitHub Actions 환경 변수로부터 저장소 URL 생성\nconst getRepositoryUrl = (): string => {\n  // GitHub Actions 환경에서 실행 중인 경우\n  if (!process.env.GITHUB_REPOSITORY) {\n    throw new Error('env.GITHUB_REPOSITORY not found')\n  }\n\n  // 로컬 환경 또는 환경 변수가 없는 경우 기본값 사용\n  return `https://github.com/${process.env.GITHUB_REPOSITORY}`\n}\n\nconst config: GlobalConfig = {\n  branches: ['main'],\n  repositoryUrl: getRepositoryUrl(),\n  tagFormat: '${version}',\n  plugins: [\n    '@semantic-release/commit-analyzer', // 커밋 메시지를 분석하여 버전 결정\n    '@semantic-release/release-notes-generator', // CHANGELOG.md에 들어갈 릴리스 노트를 생성\n    '@semantic-release/changelog', // CHANGELOG.md 업데이트\n    [\n      '@semantic-release/npm',\n      {\n        npmPublish: false\n      }\n    ], // npm 배포, package.json 업데이트\n    '@semantic-release/github', // GitHub Release를 생성\n    [\n      '@semantic-release/git', //  Git 커밋 및 푸시\n      {\n        assets: ['CHANGELOG.md', 'package.json'],\n        message:\n          'chore(release): ${nextRelease.version} [skip ci]\\n\\n${nextRelease.notes}'\n      }\n    ]\n  ]\n}\n\nexport default config\n"
+        }
+    ]
+}
