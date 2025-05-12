@@ -5,7 +5,7 @@
     "dev": "tsx watch src/dev.ts",
     "build": "esbuild --bundle --outfile=./dist/index.js --platform=node --target=node20 ./src/index.ts",
     "zip": "zip -j lambda.zip dist/index.js",
-    "update": "aws lambda update-function-code --zip-file fileb://lambda.zip --function-name hono-aws-template --region ap-northeast-2 > lambda-update.log 2>&1 & tail -f lambda-update.log",
+    "update": "(aws lambda update-function-code --zip-file fileb://lambda.zip --function-name hono-aws-template --region ap-northeast-2 > /dev/null 2>&1 &) && echo 'Lambda update started in background'",
     "lambda:cleanup": "rimraf lambda.zip dist lambda-update.log",
     "lambda:deploy": "run-s build zip update lambda:cleanup",
     "type:check": "tsc --skipLibCheck --noEmit --incremental --tsBuildInfoFile ./node_modules/.cache/tsc/tsbuildinfo",
