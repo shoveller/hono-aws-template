@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/shoveller/hono-aws-template/compare/1.0.1...1.0.2) (2025-05-12)
+
+
+### Bug Fixes
+
+* update 명령어에서 로그 출력을 백그라운드로 변경 ([bc76a0d](https://github.com/shoveller/hono-aws-template/commit/bc76a0df5d93d0626541a03117d3a3bafeba27b1))
+
 ## [1.0.1](https://github.com/shoveller/hono-aws-template/compare/1.0.0...1.0.1) (2025-05-11)
 
 
